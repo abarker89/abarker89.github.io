@@ -34,12 +34,19 @@ In HTML, semantic tags (like <header>, <article>, <nav>) describe the meaning an
     <h2>What are two (or more) benefits of using semantic tags?</h2>
     <p>Two key benefits of using semantic tags are:</p>
     <ol>
-        <li><b>Accessibility:</b> Semantic tags help screen readers and other assistive technologies understand the structure
+        <li><b>Accessibility:</b> Semantic tags help screen readers and other assistive technologies understand the
+            structure
             and purpose of content, making websites more usable for people with disabilities.</li>
-        <li><b>SEO and discoverability:</b> Search engines use semantic tags to better interpret and rank content, improving
+        <li><b>SEO and discoverability:</b> Search engines use semantic tags to better interpret and rank content,
+            improving
             visibility in search results.</li>
     </ol>
     <style>
+        ol li::marker {
+            font-weight: bold;
+            /* makes the numbers bold */
+        }
+
         li {
             margin-bottom: 10px;
             /* adds 10px of space below each item */
