@@ -23,7 +23,7 @@ p {
     width: 50%;
 }
 
-blockquote {
+p.callout {
     font-size: 2rem;
     line-height: 2.2rem;
     font-style: italic;
