@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        textarea {
+            border: none;
+            padding: 5px;
+            background-color: darkolivegreen;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Code Log 2: CSS Measuring Units</h1>
+
+    <h2>Absolute vs. Relative Units</h2>
+
+    <textarea cols="100" rows="6">
+In HTML, semantic tags (like <header>, <article>, <nav>) describe the meaning and role of their content, making code easier to read, improving accessibility, and helping search engines understand structure. Non-semantic tags (like <div> and <span>) don’t convey meaning on their own—they’re mainly used for styling or scripting. Using semantic tags creates clearer, more maintainable, and SEO-friendly code, while non-semantic tags serve as flexible building blocks when no specific semantic element fits.
+    </textarea>
+
+
+    <h1>Three Unit Sets</h1>
+    <p>Two key benefits of using semantic tags are:</p>
+    <ol>
+        <li><b>Accessibility:</b> Semantic tags help screen readers and other assistive technologies understand the
+            structure
+            and purpose of content, making websites more usable for people with disabilities.</li>
+        <li><b>SEO and discoverability:</b> Search engines use semantic tags to better interpret and rank content,
+            improving
+            visibility in search results.</li>
+    </ol>
+    <style>
+        ol li::marker {
+            font-weight: bold;
+            /* makes the numbers bold */
+        }
+
+        li {
+            margin-bottom: 10px;
+            /* adds 10px of space below each item */
+        }
+    </style>
+    <p>A bonus benefit is that semantic tags also make code more readable and maintainable for developers by clearly
+        showing what each section of content represents.</p>
+
+</body>
+
+</html>
