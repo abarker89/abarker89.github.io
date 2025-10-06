@@ -51,10 +51,8 @@ p.callout {
 #secondLayout main {
     display: grid;
     grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(11, auto);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas:
-        '. . . . . .'
-        '. . . . . .'
         '. . . . . .'
         '. . . . . .'
         '. . . . . .'
