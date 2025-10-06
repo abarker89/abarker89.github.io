@@ -49,15 +49,10 @@ p.callout {
 
 /* inherit the baseline code, above, and add to it */
 #secondLayout main {
-     display: grid;
-     grid-template-columns: repeat(6, auto);
-     grid-template-rows: repeat(11, auto);
-     grid-template-areas:
-        '. . . . . .'
-        '. . . . . .'
-        '. . . . . .'
-        '. . . . . .'
-        '. . . . . .'
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(11, auto);
+    grid-template-areas:
         '. . . . . .'
         '. . . . . .'
         '. . . . . .'
