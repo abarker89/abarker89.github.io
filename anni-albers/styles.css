@@ -58,3 +58,6 @@ p.callout {
         '. . . . . .'
         '. . . . . .';
 }
+
+#secondLayout #titleRow {grid-area: title;}
+#secondLayout
