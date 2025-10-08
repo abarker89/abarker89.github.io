@@ -117,10 +117,6 @@ p.callout {
     grid-area: c1;
 }
 
-#secondLayout #callout1 {
-    grid-area: c1;
-}
-
 #secondLayout #callout2 {
     grid-area: c2;
 }
