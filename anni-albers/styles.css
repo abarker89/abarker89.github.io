@@ -27,11 +27,12 @@ p.callout {
     font-size: 2rem;
     line-height: 2.2rem;
     font-style: italic;
-    float: right;
-    text-align: right;
-    padding-left: 2em;
-    padding-right: 2em;
-    margin-top: 1;
+    float: auto;
+    text-align: auto;
+    padding-left: auto;
+    padding-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #row1 p,
