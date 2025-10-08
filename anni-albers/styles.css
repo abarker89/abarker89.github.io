@@ -90,6 +90,10 @@ p.callout {
     grid-area: p4;
 }
 
+#secondLayout #para5 {
+    grid-area: p5;
+}
+
 #secondLayout #para6 {
     grid-area: p6;
 }
