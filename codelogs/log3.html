@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+
+
+</head>
+
+<body>
+
+    <h1>Code Log 3: CSS Media Queries</h1>
+
+    <h3>How does a CSS media query work, and why is it useful?</h3>
+    <p> A CSS media query checks the characteristics of a device, such as screen size or resolution,
+        and applies certain styles only when specific conditions are met. It is useful because it
+        allows websites to adjust their layout and design for different devices, keeping them
+        responsive and user friendly across all screens.</p>
+
+    <h3>What "media features" are supported by media queries — such as "orientation" or "max-width" — and what do they
+        do? Pick any 4 to explain.</h3>
+    <ol>
+        <li>
+            <strong>max-width:</strong> Targets devices with a screen width up to a specific value.
+            Commonly used for responsive layouts that adjust for smaller screens like phones or tablets.
+        </li>
+        <li>
+            <strong>min-width:</strong> Targets devices with a screen width greater than or equal to a
+            specific value. It helps apply styles for larger screens such as laptops or desktops.
+        </li>
+        <li>
+            <strong>orientation:</strong> Detects whether a device is in portrait or landscape mode.
+            Useful for adjusting layouts on mobile or tablet devices depending on how they are held.
+        </li>
+        <li>
+            <strong>prefers-color-scheme:</strong> Checks whether the user has set their system to light
+            mode or dark mode. This lets websites automatically match the user’s color preference.
+        </li>
+    </ol>
+
+
+    <style>
+        ol li::marker {
+            font-weight: bold;
+            /* makes the numbers bold */
+        }
+
+        li {
+            margin-bottom: 10px;
+            /* adds 10px of space below each item */
+        }
+    </style>
+
+
+</body>
+
+</html>
