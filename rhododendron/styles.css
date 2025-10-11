@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -22,6 +23,7 @@ header {
     height: 100vh;
     background-image: url(Pacific\ Rhododendron\ 1\ -\ Walter\ Siegmund.jpeg);
     background-size: cover;
+    background-position: center center;
 }
 
 #rhod1title {
@@ -34,5 +36,8 @@ header {
 #rhod1title h1 {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 1em;
+    color: white;
+    font-size: 2.5em;
+    width: calc(100vw - 2em);
 }
