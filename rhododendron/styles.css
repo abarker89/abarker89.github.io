@@ -1,4 +1,3 @@
-/* reset and body */
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -9,10 +8,8 @@ body {
     padding: 0;
 }
 
-/* header keeps your full screen background image */
 header {
     position: relative;
-    /* important so #rhod1 can be absolute inside */
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -21,7 +18,6 @@ header {
 #rhod1 {
     position: absolute;
     inset: 0;
-    /* shorthand for top/right/bottom/left: 0 */
     background-image: url("Pacific Rhododendron 1 - Walter Siegmund.jpeg");
     background-size: cover;
     background-position: center center;
@@ -31,7 +27,6 @@ header {
 #rhod1title {
     position: relative;
     z-index: 1;
-    /* stays above the background */
     width: 100%;
     height: 100%;
 }
@@ -61,7 +56,6 @@ main {
     padding: 24px 16px;
 }
 
-/* list tidy */
 .facts {
     margin: 0;
     padding-left: 1rem;
@@ -80,11 +74,9 @@ main {
     background-position: center;
     width: 100%;
     max-width: 375px;
-    /* iPhone SE friendly */
     height: 250px;
     border-radius: 10px;
     margin: 0 auto;
-    /* centered under list on mobile */
 }
 
 /* desktop: put image to the right */
@@ -97,26 +89,20 @@ main {
 
     .facts {
         flex: 0 0 480px;
-        /* fixed 480px column */
         max-width: 480px;
         width: 480px;
         flex-shrink: 0;
-        /* do not get skinny */
         margin: 0;
         padding-left: 1rem;
     }
 
     #rhod2 {
         flex: 0 0 40vw;
-        /* image to the right */
         max-width: 40vw;
         height: 50vh;
-        /* adjust to taste */
         margin: 0;
-        /* no centering on desktop */
     }
 
-    /* keep your existing header split if you want it */
     #rhod1 {
         width: 50vw;
     }
