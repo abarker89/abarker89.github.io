@@ -34,6 +34,15 @@ li {
     background-position: center center;
 }
 
+#rhod2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(rhodo2.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+
 #rhod1title {
     position: absolute;
     width: 100vw;
@@ -56,6 +65,10 @@ li {
 @media screen and (orientation: landscape) {
 
     #rhod1 {
+        width: 50vw;
+    }
+
+    #rhod2 {
         width: 50vw;
     }
 
