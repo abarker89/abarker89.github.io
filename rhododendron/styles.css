@@ -15,9 +15,14 @@ header {
     height: 100vh;
 }
 
+main {
+    background-color: #877994
+}
+
 li {
     margin-bottom: 10px;
-    margin-top: 10px;
+    padding: 10px;
+    background-color: #877994
 }
 
 #rhod1 {
