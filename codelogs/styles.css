@@ -1,17 +1,17 @@
 body {
-  background-color: #f0f0f0;
-  color: #333333;
-  font-family: Arial, sans-serif;
-  padding: 20px;
+    background-color: #f0f0f0;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
 h1 {
-  color: darkblue;
+    color: darkblue;
 }
 
 .example {
-  border: 2px solid rgb(255, 99, 71);
-  background-color: lightyellow;
-  color: #006400;
-  padding: 10px;
+    border: 2px solid rgb(255, 99, 71);
+    background-color: lightyellow;
+    color: #006400;
+    padding: 10px;
 }
