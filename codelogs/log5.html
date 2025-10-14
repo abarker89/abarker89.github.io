@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+
+    <link rel="stylesheet" href="styles.css" media="all">
+</head>
+
+<body>
+
+    <body>
+        <h1>Images</h1>
+        <p>This page explains how images are used in HTML and CSS, how they differ, and which image formats are best for
+            different situations.</p>
+
+        <h2>Using Images in HTML vs CSS</h2>
+
+        <h3>1. Using the &lt;img&gt; Tag in HTML</h3>
+        <ul>
+            <li>Uses the <code>&lt;img&gt;</code> element directly in the HTML.</li>
+            <li>Displays an image as part of the page content.</li>
+            <li>Supports <code>alt</code> text for accessibility.</li>
+            <li>Has intrinsic dimensions and can affect layout flow.</li>
+        </ul>
+        <pre><code>&lt;img src="photo.jpg" alt="Sunset over mountains" width="400" height="300"&gt;</code></pre>
+
+        <h3>2. Using background-image in CSS</h3>
+        <ul>
+            <li>Uses the CSS property <code>background-image</code> on an element.</li>
+            <li>Displays an image as decoration or background, not part of the main content.</li>
+            <li>Does not support <code>alt</code> text or affect document structure.</li>
+            <li>Good for patterns, banners, and visual design elements.</li>
+        </ul>
+        <pre><code>div {
+  background-image: url("photo.jpg");
+  background-size: cover;
+  background-position: center;
+}</code></pre>
+
+        <h3>Key Differences</h3>
+        <ul>
+            <li><strong>HTML &lt;img&gt;:</strong> For meaningful, content-related images.</li>
+            <li><strong>CSS background-image:</strong> For decorative or layout purposes.</li>
+            <li><strong>Accessibility:</strong> <code>&lt;img&gt;</code> supports <code>alt</code>; background images do
+                not.</li>
+            <li><strong>Layout:</strong> <code>&lt;img&gt;</code> takes up space in the flow; background images fill an
+                element’s box.</li>
+        </ul>
+
+        <h2>Other CSS Properties Affecting Background Images</h2>
+        <ul>
+            <li><strong>background-size:</strong> Controls how the image is scaled (e.g. <code>cover</code> or
+                <code>contain</code>).</li>
+            <li><strong>background-position:</strong> Sets where the image is placed within the element (e.g.
+                <code>center</code>, <code>top left</code>).</li>
+            <li><strong>background-repeat:</strong> Determines if the image repeats (e.g. <code>no-repeat</code>,
+                <code>repeat-x</code>).</li>
+        </ul>
+
+        <h2>Dimensions vs Resolution</h2>
+        <p><strong>Dimensions</strong> are the width and height in pixels, while <strong>resolution</strong> refers to
+            how many pixels fit into a given physical space (like pixels per inch).</p>
+
+        <h2>Extra Credit: Image File Formats</h2>
+
+        <h3>GIF</h3>
+        <ul>
+            <li>Supports simple animation and transparency.</li>
+            <li>Limited to 256 colors, so not ideal for photos.</li>
+            <li>Best for small animations or icons.</li>
+        </ul>
+
+        <h3>PNG</h3>
+        <ul>
+            <li>Lossless compression (no quality loss).</li>
+            <li>Supports full transparency.</li>
+            <li>Great for logos, icons, and images with text.</li>
+        </ul>
+
+        <h3>JPG/JPEG</h3>
+        <ul>
+            <li>Lossy compression (some quality loss for smaller file size).</li>
+            <li>Best for photos and detailed images.</li>
+            <li>Does not support transparency.</li>
+        </ul>
+
+        <h3>WebP</h3>
+        <ul>
+            <li>Modern format that supports both lossy and lossless compression.</li>
+            <li>Supports transparency and animation.</li>
+            <li>Smaller file sizes than PNG or JPG at similar quality.</li>
+        </ul>
+
+        <h3>SVG</h3>
+        <ul>
+            <li>Vector-based, not pixel-based.</li>
+            <li>Scales infinitely without losing quality.</li>
+            <li>Great for logos, icons, and simple illustrations.</li>
+        </ul>
+
+        <h3>Summary of When to Use Each</h3>
+        <ul>
+            <li><strong>GIF:</strong> Simple animations.</li>
+            <li><strong>PNG:</strong> Crisp, transparent graphics.</li>
+            <li><strong>JPEG:</strong> Photographs and detailed images.</li>
+            <li><strong>WebP:</strong> Modern choice for web performance.</li>
+            <li><strong>SVG:</strong> Scalable graphics and icons.</li>
+        </ul>
+    </body>
+
+</html>
