@@ -11,50 +11,50 @@ body {
     color: #222;
 }
 
-/* ---------- mobile layout (default) ---------- */
+/* ---------- MOBILE LAYOUT (DEFAULT) ---------- */
 
 header {
     position: relative;
-    width: 100vw;
-    /* make header feel like the big image block from your wireframe */
-    padding-bottom: 16px;
+    width: 100%;
+    overflow: hidden;
     background-color: #fff;
+    padding-bottom: 1rem;
 }
 
-/* big image at the top */
+/* HERO IMAGE (fixed height so title does NOT overlap description) */
 header img {
     width: 100%;
-    height: auto;
+    height: 260px;            /* ← FIX #1: prevents overlap */
+    object-fit: cover;
     display: block;
 }
 
-/* recipe title over the image (like Blackberry Cobbler wireframe) */
+/* TITLE overlay on the image */
 header h1 {
     position: absolute;
     left: 1rem;
     bottom: 1rem;
     margin: 0;
-    padding: 0.25rem 0.4rem;
+    padding: 0.3rem 0.5rem;
     font-size: 2.4rem;
     line-height: 1;
+    background-color: rgba(255, 255, 255, 0.85); /* optional but clean */
     color: #000;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* description text under the image */
+/* Description text under the image */
 header p {
     margin: 1rem 1.25rem 0;
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
-/* main content – one column on mobile */
+/* Main content (stacked on mobile) */
 main {
     background-color: #ffffff;
     padding: 1.25rem;
 }
 
-/* stack sections on mobile */
 main section {
     margin-bottom: 1.5rem;
 }
@@ -64,7 +64,7 @@ h2 {
     font-size: 1.3rem;
 }
 
-/* ingredients & directions text */
+/* Ingredients & Directions */
 ul,
 ol {
     padding-left: 1.25rem;
@@ -83,14 +83,14 @@ footer a {
     color: inherit;
 }
 
-/* ---------- landscape / desktop layout ---------- */
+/* ---------- LANDSCAPE / DESKTOP LAYOUT ---------- */
 
 @media screen and (orientation: landscape) {
     body {
         background-color: #e6e0ef;
     }
 
-    /* center content “card” on the page */
+    /* Center everything like your rhodo project */
     header,
     main,
     footer {
@@ -98,23 +98,24 @@ footer a {
         margin: 0 auto;
     }
 
+    /* DESKTOP HEADER → image left, text right */
     header {
         display: flex;
         align-items: center;
         gap: 2rem;
         padding: 2rem 2rem 1rem;
-        background-color: #fff;
     }
 
-    /* put image on the left, text/title on the right */
     header img {
         position: static;
         width: 50%;
         max-width: 480px;
         height: auto;
         border-radius: 10px;
+        object-fit: cover;
     }
 
+    /* Desktop title (no overlay) */
     header h1 {
         position: static;
         margin: 0 0 0.5rem;
@@ -128,7 +129,7 @@ footer a {
         font-size: 1rem;
     }
 
-    /* main: ingredients on the left, directions on the right */
+    /* DESKTOP MAIN → two columns */
     main {
         display: flex;
         flex-direction: row;
@@ -138,16 +139,13 @@ footer a {
         background-color: #fff;
     }
 
-    main section {
-        margin-bottom: 0;
-    }
-
-    /* give ingredients a fixed-ish width like your rhodo facts list */
+    /* Ingredients left */
     main section:first-of-type {
         flex: 0 0 320px;
         max-width: 320px;
     }
 
+    /* Directions right */
     main section:last-of-type {
         flex: 1;
     }
