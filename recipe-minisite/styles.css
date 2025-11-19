@@ -104,154 +104,44 @@
     }
 }
 
-/* CSS for responsive menu demo */
+/* nav structural styles already exist above this in your file */
 
-/* define variables */
-:root {
-    --nav-height: 3rem;
-    --nav-bkgd-color: gray;
-    --nav-text-color: white;
-    --nav-hover-bkgd-color: lightgray;
-    --nav-hover-text-color: black;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: var(--nav-height) 0 0 0;
-}
-
-nav {
+/* hide submenu by default */
+.submenu {
+    display: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--nav-height);
-    background-color: var(--nav-bkgd-color);
-}
-
-#navBurger {
-    position: relative;
-    display: block;
-    font-size: 2rem;
-    color: var(--nav-text-color);
-    padding: 0.1em 0 0 0.3em;
-    max-height: 2rem;
-}
-
-nav ul {
-    position: relative;
-    background-color: var(--nav-bkgd-color);
+    background: #ffffff;
+    padding: 10px 0;
     list-style: none;
     margin: 0;
-    padding: 0;
+    border: 1px solid #ccc;
+    z-index: 100;
 }
 
-nav>ul {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s;
-}
-
-nav.clicked>ul {
-    max-height: 90vh;
-}
-
-nav>ul>li {
-    position: relative;
-    background-color: var(--nav-bkgd-color);
+/* show submenu when JS adds "open" */
+.has-submenu.open > .submenu {
     display: block;
-    margin: 1rem;
 }
 
-nav>ul>li>a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem;
+/* each item */
+.submenu li {
+    padding: 8px 20px;
+    white-space: nowrap;
 }
 
-nav>ul>li>a::after {
-    position: absolute;
-    content: "⌄";
-    right: 0.3rem;
-    top: 0.2rem;
-    color: inherit;
-    font-size: 110%;
-}
-
-nav>ul>li>ul {
-    margin: 0 0 0 1rem;
-    background-color: inherit;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s;
-}
-
-nav>ul>li.clicked>ul {
-    max-height: 90vh;
-}
-
-nav>ul>li>ul>li {
-    padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-nav a {
+.submenu li a {
+    color: black;
     text-decoration: none;
-    color: var(--nav-text-color);
 }
 
-nav>ul>li>ul>li:hover {
-    background-color: var(--nav-hover-bkgd-color);
+.has-submenu {
+    position: relative;
 }
 
-nav>ul>li>ul>li:hover a {
-    color: var(--nav-hover-text-color);
-}
-
-
-/* ----- MEDIA QUERY for landscape/desktop layout ----- */
-@media screen and (orientation: landscape) {
-
-    #navBurger {
-        display: none;
+/* mobile: stack dropdowns */
+@media (max-width: 700px) {
+    .submenu {
+        position: static;
+        border: none;
     }
-
-    nav>ul {
-        overflow: visible;
-    }
-
-    nav>ul>li {
-        float: left;
-        margin: 0.5rem;
-    }
-
-    nav>ul>li a {
-        padding-right: 0.5rem;
-        margin: 0;
-    }
-
-    nav>ul>li>ul {
-        margin: 0 0.5rem 0.5rem 0;
-        visibility: hidden;
-        position: absolute;
-    }
-
-    nav>ul>li.clicked>ul {
-        display: block;
-        visibility: visible;
-    }
-
-    nav>ul>li>ul li {
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    nav>ul>li>a::after {
-        content: "";
-    }
-
 }
