@@ -7,44 +7,56 @@
         background-color: #ffffff;
     }
 
-    /* hero */
     header {
         position: relative;
+        /* This makes h1 overlay work correctly */
         padding: 0;
         margin: 0;
         border-bottom: 1px solid #000;
     }
 
+    /* IMAGE: defines the space where the title sits */
     header img {
         width: 100%;
-        height: 260px;         /* tall hero area like the wireframe */
+        height: 260px;
+        /* enough height for the overlay title */
         object-fit: cover;
         display: block;
     }
 
-    /* big title over the bottom-left of the image */
+    /* TITLE OVER IMAGE */
     .header-text h1 {
         position: absolute;
         left: 1rem;
-        bottom: 0.75rem;
+        bottom: 1rem;
+        /* sits at bottom of image */
         margin: 0;
         font-size: 3rem;
-        line-height: 0.9;
+        line-height: 1;
+        z-index: 10;
+        /* stays above image */
     }
 
-    /* times row under the image */
+    /* TIME ROW (must be BELOW the image, not overlaid) */
     .meta {
+        position: relative;
+        /* brings it back to normal layout flow */
+        z-index: 1;
+        background: #ffffff;
         display: flex;
         justify-content: space-between;
         gap: 0.5rem;
         padding: 0.75rem 1rem 1rem;
         font-size: 0.95rem;
+        border-bottom: 1px solid #000;
     }
 
+    /* Main layout below */
     main {
         padding: 1.25rem 1rem 1.5rem;
     }
 }
+
 
 /* ---------- DESKTOP / LANDSCAPE LAYOUT ---------- */
 @media screen and (orientation: landscape) {
@@ -63,7 +75,8 @@
     /* DESKTOP HEADER → IMAGE LEFT + TITLE/META RIGHT */
     header {
         display: grid;
-        grid-template-columns: 2fr 1.4fr; /* LEFT BIG / RIGHT SMALL */
+        grid-template-columns: 2fr 1.4fr;
+        /* LEFT BIG / RIGHT SMALL */
         align-items: start;
         column-gap: 2.5rem;
         padding: 2rem 2rem 1.25rem;
@@ -72,8 +85,10 @@
         /* --- ADD THESE TO FILL THE SCREEN --- */
         width: 100vw;
         height: 100vh;
-        max-width: 100vw;  /* override previous max width */
-        margin: 0;         /* force full-bleed */
+        max-width: 100vw;
+        /* override previous max width */
+        margin: 0;
+        /* force full-bleed */
     }
 
     header img {
