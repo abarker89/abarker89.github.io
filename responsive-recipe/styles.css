@@ -1,3 +1,51 @@
+/* ---------- MOBILE / PORTRAIT LAYOUT ---------- */
+@media screen and (orientation: portrait) {
+
+    body {
+        margin: 16px;
+        border: 1px solid #000;
+        background-color: #ffffff;
+    }
+
+    /* hero */
+    header {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid #000;
+    }
+
+    header img {
+        width: 100%;
+        height: 260px;         /* tall hero area like the wireframe */
+        object-fit: cover;
+        display: block;
+    }
+
+    /* big title over the bottom-left of the image */
+    .header-text h1 {
+        position: absolute;
+        left: 1rem;
+        bottom: 0.75rem;
+        margin: 0;
+        font-size: 3rem;
+        line-height: 0.9;
+    }
+
+    /* times row under the image */
+    .meta {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    main {
+        padding: 1.25rem 1rem 1.5rem;
+    }
+}
+
 /* ---------- DESKTOP / LANDSCAPE LAYOUT ---------- */
 @media screen and (orientation: landscape) {
 
