@@ -20,25 +20,37 @@
 <body>
 
 
-    <nav>
-        <ul class="menu">
+    <nav class="navbar">
+        <ul class="nav-menu">
+
             <li><a href="index.html">Home</a></li>
-            <li>
+
+            <!-- My Recipes dropdown -->
+            <li class="has-submenu">
                 <a href="#">My Recipes</a>
                 <ul class="submenu">
-                    <li><a href="recipe1.html">Better-Than-Ever German Cake</a></li>
-                    <li><a href="recipe2.html">Chocolate Showdown</a></li>
-                    <li><a href="recipe3.html">Sweet German Magic</a></li>
+                    <li><a href="recipe1.html">Recipe 1</a></li>
+                    <li><a href="recipe2.html">Recipe 2</a></li>
+                    <li><a href="recipe3.html">Recipe 3</a></li>
                 </ul>
-            <li>
+            </li>
+
+            <!-- Other Recipes dropdown -->
+            <li class="has-submenu">
                 <a href="#">Other Recipes</a>
                 <ul class="submenu">
-                    <li><a href="recipe1.html">Better-Than-Ever German Cake</a></li>
-                    <li><a href="recipe2.html">Chocolate Showdown</a></li>
-                    <li><a href="recipe3.html">Sweet German Magic</a></li>
+                    <li><a href="https://example1.com">External Site 1</a></li>
+                    <li><a href="https://example2.com">External Site 2</a></li>
+                    <li><a href="https://example3.com">External Site 3</a></li>
                 </ul>
+            </li>
 
+        </ul>
+
+        <!-- mobile menu button -->
+        <button class="nav-toggle">☰</button>
     </nav>
+
 
     <h1>Adam</h1>
     <p>Student, Designer, Artist, Musician, Movie Enjoyer</p>
