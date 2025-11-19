@@ -3,59 +3,56 @@
 
     body {
         margin: 16px;
-        border: 1px solid #000;
         background-color: #ffffff;
+        border: 1px solid #000;
     }
 
     header {
-        position: relative;
-        /* This makes h1 overlay work correctly */
         padding: 0;
         margin: 0;
         border-bottom: 1px solid #000;
     }
 
-    /* IMAGE: defines the space where the title sits */
+    /* hero image */
     header img {
         width: 100%;
         height: 260px;
-        /* enough height for the overlay title */
+        /* fixed hero height */
         object-fit: cover;
         display: block;
     }
 
-    /* TITLE OVER IMAGE */
-    .header-text h1 {
-        position: absolute;
-        left: 1rem;
-        bottom: 1rem;
-        /* sits at bottom of image */
-        margin: 0;
-        font-size: 3rem;
-        line-height: 1;
-        z-index: 10;
-        /* stays above image */
+    /* title + meta block that overlaps the bottom of the image */
+    .header-text {
+        margin-top: -3.5rem;
+        /* pulls the title up over the image */
+        padding: 0 1rem 1rem;
     }
 
-    /* TIME ROW (must be BELOW the image, not overlaid) */
+    .header-text h1 {
+        margin: 0 0 0.5rem;
+        font-size: 3rem;
+        line-height: 0.9;
+    }
+
+    /* time row under the title (not covered) */
     .meta {
-        position: relative;
-        /* brings it back to normal layout flow */
-        z-index: 1;
-        background: #ffffff;
         display: flex;
         justify-content: space-between;
         gap: 0.5rem;
-        padding: 0.75rem 1rem 1rem;
         font-size: 0.95rem;
-        border-bottom: 1px solid #000;
     }
 
-    /* Main layout below */
     main {
         padding: 1.25rem 1rem 1.5rem;
     }
+
+    footer {
+        padding: 0.75rem 1rem 1.25rem;
+        font-size: 0.8rem;
+    }
 }
+
 
 
 /* ---------- DESKTOP / LANDSCAPE LAYOUT ---------- */
