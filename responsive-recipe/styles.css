@@ -1,4 +1,4 @@
-/* ---------- MOBILE / PORTRAIT LAYOUT ---------- */
+/* ---------- MOBILE LAYOUT ---------- */
 @media screen and (orientation: portrait) {
 
     body {
@@ -13,19 +13,15 @@
         border-bottom: 1px solid #000;
     }
 
-    /* hero image */
     header img {
         width: 100%;
         height: 260px;
-        /* fixed hero height */
         object-fit: cover;
         display: block;
     }
 
-    /* title + meta block that overlaps the bottom of the image */
     .header-text {
         margin-top: -3.5rem;
-        /* pulls the title up over the image */
         padding: 0 1rem 1rem;
     }
 
@@ -35,7 +31,6 @@
         line-height: 0.9;
     }
 
-    /* time row under the title (not covered) */
     .meta {
         display: flex;
         justify-content: space-between;
@@ -55,7 +50,7 @@
 
 
 
-/* ---------- DESKTOP / LANDSCAPE LAYOUT ---------- */
+/* ---------- DESKTOP LAYOUT ---------- */
 @media screen and (orientation: landscape) {
 
     body {
@@ -69,30 +64,23 @@
         margin: 0 auto;
     }
 
-    /* DESKTOP HEADER → IMAGE LEFT + TITLE/META RIGHT */
     header {
         display: grid;
         grid-template-columns: 2fr 1.4fr;
-        /* LEFT BIG / RIGHT SMALL */
         align-items: start;
         column-gap: 2.5rem;
         padding: 2rem 2rem 1.25rem;
         background-color: #ffffff;
-
-        /* --- ADD THESE TO FILL THE SCREEN --- */
         width: 100vw;
         height: 100vh;
         max-width: 100vw;
-        /* override previous max width */
         margin: 0;
-        /* force full-bleed */
     }
 
     header img {
         width: 100%;
         height: 100%;
 
-        /* --- ADD THIS SO THE IMAGE FILLS ITS SPACE --- */
         object-fit: cover;
 
         border-radius: 10px;
