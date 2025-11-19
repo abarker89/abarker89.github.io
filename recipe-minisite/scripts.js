@@ -1,51 +1,64 @@
-// JS for responsive menu demo
-// file renamed to "scripts.js" (plural) after the demo
-
-// function to hide/show menu items 
-function clickNav(bodyClicked) {
-    let navHandle = document.querySelector("nav");
-    let burgerWasClicked = navHandle.classList.contains("clicked");
-    if (!bodyClicked) navHandle.classList.toggle("clicked"); // ...toggle a "clicked" class on the nav
-    else navHandle.classList.remove("clicked");
-
-    // remove menu .clicked if burger is closed
-    if (burgerWasClicked || bodyClicked) {
-        let allMenus = document.querySelectorAll("nav > ul > li");
-        for (const eachMenu of allMenus) {
-            eachMenu.classList.remove("clicked");
-        }
-    }
-}
-
-// load click events after DOM loaded
 document.addEventListener("DOMContentLoaded", function () {
 
-    // respond to clicks on the burger
-    document.querySelector("#navBurger").addEventListener("click", function (e) {
-        clickNav(false);
-    });
 
-    // handles to all topline nav items
-    let allMenus = document.querySelectorAll("nav > ul > li");
-    for (const eachMenu of allMenus) {
-        // loop through collection of handles individually
-        eachMenu.addEventListener("click", function (e) {
-            let wasClicked = eachMenu.classList.contains("clicked");
-            let allMenus2 = document.querySelectorAll("nav > ul > li");
-            for (const eachMenu2 of allMenus2) {
-                eachMenu2.classList.remove("clicked");
-            }
-            if (!wasClicked) {
-                eachMenu.classList.add("clicked"); // if this is newly clicked, add click class back
-            }
+  const menuItems = document.querySelectorAll("nav ul.menu > li");
+
+  menuItems.forEach((item) => {
+    const submenu = item.querySelector(".submenu");
+
+    if (submenu) {
+      item.querySelector("a").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        
+        menuItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            const otherSub = otherItem.querySelector(".submenu");
+            if (otherSub) otherSub.style.display = "none";
+          }
         });
+
+ 
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+      });
     }
+  });
 
-    // close nav if someone clicks outside nav
-    document.querySelector("html").addEventListener("click", function (e) {
-        if (!e.target.closest("nav")) {
-            clickNav(true);
-        }
+ 
+  document.addEventListener("click", function (e) {
+    const nav = document.querySelector("nav");
+    if (!nav.contains(e.target)) {
+      menuItems.forEach((item) => {
+        const submenu = item.querySelector(".submenu");
+        if (submenu) submenu.style.display = "none";
+      });
+    }
+  });
+
+
+  function handleHover() {
+    if (window.innerWidth >= 768) {
+      menuItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          const submenu = item.querySelector(".submenu");
+          if (submenu) submenu.style.display = "block";
+        });
+        item.addEventListener("mouseleave", () => {
+          const submenu = item.querySelector(".submenu");
+          if (submenu) submenu.style.display = "none";
+        });
+      });
+    }
+  }
+  handleHover();
+  window.addEventListener("resize", handleHover);
+
+
+  const recipeImages = document.querySelectorAll('.recipe-hero-img, .recipe-card img');
+
+  recipeImages.forEach(image => {
+    image.addEventListener('click', () => {
+      image.classList.toggle('active');
     });
-
+  });
 });
