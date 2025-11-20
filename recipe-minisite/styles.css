@@ -110,7 +110,6 @@
     font-weight: bold;
 }
 
-/* Optional: keep main images inside content width */
 main img {
     display: block;
     max-width: 100%;
@@ -257,7 +256,7 @@ nav > ul > li > ul > li:hover a {
         margin: 0 0.5rem 0.5rem 0;
         visibility: hidden;
         position: absolute;
-        max-height: none;      /* ignore mobile accordion height */
+        max-height: none;      
         overflow: visible;
     }
 
@@ -278,7 +277,6 @@ nav > ul > li > ul > li:hover a {
         padding: 0.5rem 0.75rem;
     }
 
-    /* remove caret icon on desktop */
     nav > ul > li > a::after {
         content: "";
     }
