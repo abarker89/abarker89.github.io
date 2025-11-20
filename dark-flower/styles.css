@@ -41,7 +41,32 @@ header {
     margin: 0;
 }
 
-/* main area */
+/* -------------------------------------- */
+/* DARK MODE BUTTON                       */
+/* -------------------------------------- */
+
+#toggleDarkMode {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    padding: 8px 14px;
+    font-size: 14px;
+    border: 1px solid #333;
+    border-radius: 4px;
+
+    background-color: #f2f2f2;
+    color: #333;
+
+    cursor: pointer;
+}
+
+#toggleDarkMode:hover {
+    background-color: #e0e0e0;
+}
+
+/* -------------------------------------- */
+
 main {
     background-color: #877994;
 }
