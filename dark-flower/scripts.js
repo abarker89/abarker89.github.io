@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let darkModeButton = document.querySelector("#toggleDarkMode");
 
     // add a click function and handler
-    darkModeButton.addEventListener("click", function (e) {
-        
+    darkModeButton.addEventListener("click", function () {
+
         // when clicked, add class to the body called "darkMode"
         document.body.classList.toggle("darkMode");
-        
+
     });
 
 });

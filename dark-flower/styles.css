@@ -6,7 +6,59 @@
 body {
     margin: 0;
     padding: 0;
+    color: black;
+    background-color: white;
 }
+
+/* ========================= */
+/* DARK MODE: STYLES         */
+/* ========================= */
+
+body.darkMode {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+body.darkMode header {
+    filter: brightness(0.6);
+}
+
+body.darkMode #rhod1title h1 {
+    color: #ffd4ff;
+}
+
+body.darkMode #rhod2 {
+    filter: brightness(0.7);
+}
+
+/* ========================= */
+/* DARK MODE BUTTON          */
+/* ========================= */
+
+#toggleDarkMode {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    padding: 8px 14px;
+    font-size: 14px;
+
+    border: 1px solid #333;
+    border-radius: 4px;
+
+    background-color: #f2f2f2;
+    color: #333;
+
+    cursor: pointer;
+}
+
+#toggleDarkMode:hover {
+    background-color: #e0e0e0;
+}
+
+/* ========================= */
+/* HEADER                    */
+/* ========================= */
 
 header {
     position: relative;
@@ -41,37 +93,18 @@ header {
     margin: 0;
 }
 
-/* -------------------------------------- */
-/* DARK MODE BUTTON                       */
-/* -------------------------------------- */
-
-#toggleDarkMode {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-
-    padding: 8px 14px;
-    font-size: 14px;
-    border: 1px solid #333;
-    border-radius: 4px;
-
-    background-color: #f2f2f2;
-    color: #333;
-
-    cursor: pointer;
-}
-
-#toggleDarkMode:hover {
-    background-color: #e0e0e0;
-}
-
-/* -------------------------------------- */
+/* ========================= */
+/* MAIN CONTENT              */
+/* ========================= */
 
 main {
     background-color: #877994;
 }
 
-/* content layout: mobile first, stack list then image */
+body.darkMode main {
+    background-color: #3b3247;
+}
+
 #content {
     display: flex;
     flex-direction: column;
@@ -86,13 +119,12 @@ main {
     padding-left: 1rem;
 }
 
-.facts>li {
+.facts > li {
     margin-bottom: 10px;
     padding: 10px;
-    background: transparent;
 }
 
-/* image box for rhodo2.jpeg */
+/* IMAGE BOX */
 #rhod2 {
     background-image: url("rhodo2.jpeg");
     background-size: cover;
@@ -104,7 +136,10 @@ main {
     margin: 0 auto;
 }
 
-/* desktop: put image to the right */
+/* ========================= */
+/* DESKTOP LAYOUT (LANDSCAPE) */
+/* ========================= */
+
 @media screen and (orientation: landscape) {
     #content {
         flex-direction: row;
