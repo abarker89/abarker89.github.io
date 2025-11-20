@@ -10,9 +10,9 @@ body {
     background-color: white;
 }
 
-/* ========================= */
-/* DARK MODE: STYLES         */
-/* ========================= */
+
+/* DARK MODE: STYLES */
+
 
 body.darkMode {
     background-color: #1a1a1a;
@@ -31,14 +31,15 @@ body.darkMode #rhod2 {
     filter: brightness(0.7);
 }
 
-/* ========================= */
-/* DARK MODE BUTTON          */
-/* ========================= */
+
+/* DARK MODE BUTTON */
+
 
 #toggleDarkMode {
     position: fixed;
     top: 15px;
     right: 15px;
+    z-index: 9999;
 
     padding: 8px 14px;
     font-size: 14px;
@@ -56,9 +57,9 @@ body.darkMode #rhod2 {
     background-color: #e0e0e0;
 }
 
-/* ========================= */
-/* HEADER                    */
-/* ========================= */
+
+/* HEADER */
+
 
 header {
     position: relative;
@@ -93,9 +94,9 @@ header {
     margin: 0;
 }
 
-/* ========================= */
+
 /* MAIN CONTENT              */
-/* ========================= */
+
 
 main {
     background-color: #877994;
@@ -119,7 +120,7 @@ body.darkMode main {
     padding-left: 1rem;
 }
 
-.facts > li {
+.facts>li {
     margin-bottom: 10px;
     padding: 10px;
 }
@@ -136,9 +137,9 @@ body.darkMode main {
     margin: 0 auto;
 }
 
-/* ========================= */
+
 /* DESKTOP LAYOUT (LANDSCAPE) */
-/* ========================= */
+
 
 @media screen and (orientation: landscape) {
     #content {
