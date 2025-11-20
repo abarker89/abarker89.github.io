@@ -80,9 +80,7 @@
     header img {
         width: 100%;
         height: 100%;
-
         object-fit: cover;
-
         border-radius: 10px;
         display: block;
     }
@@ -103,6 +101,16 @@
         font-size: 1rem;
     }
 }
+
+
+/* ---- SITE TITLE ---- */
+.site-title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 40px 0 20px;
+    font-weight: bold;
+}
+
 
 /* CSS for responsive menu demo */
 
@@ -150,31 +158,31 @@ nav ul {
     padding: 0;
 }
 
-nav>ul {
+nav > ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
 }
 
-nav.clicked>ul {
+nav.clicked > ul {
     max-height: 90vh;
 }
 
-nav>ul>li {
+nav > ul > li {
     position: relative;
     background-color: var(--nav-bkgd-color);
     display: block;
     margin: 1rem;
 }
 
-nav>ul>li>a {
+nav > ul > li > a {
     display: block;
     width: 100%;
     height: 100%;
     padding: 0.5rem;
 }
 
-nav>ul>li>a::after {
+nav > ul > li > a::after {
     position: absolute;
     content: "⌄";
     right: 0.3rem;
@@ -183,7 +191,7 @@ nav>ul>li>a::after {
     font-size: 110%;
 }
 
-nav>ul>li>ul {
+nav > ul > li > ul {
     margin: 0 0 0 1rem;
     background-color: inherit;
     max-height: 0;
@@ -191,11 +199,11 @@ nav>ul>li>ul {
     transition: max-height 0.5s;
 }
 
-nav>ul>li.clicked>ul {
+nav > ul > li.clicked > ul {
     max-height: 90vh;
 }
 
-nav>ul>li>ul>li {
+nav > ul > li > ul > li {
     padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
@@ -204,70 +212,76 @@ nav a {
     color: var(--nav-text-color);
 }
 
-nav>ul>li>ul>li:hover {
+nav > ul > li > ul > li:hover {
     background-color: var(--nav-hover-bkgd-color);
 }
 
-nav>ul>li>ul>li:hover a {
+nav > ul > li > ul > li:hover a {
     color: var(--nav-hover-text-color);
 }
 
 
-/* ----- MEDIA QUERY for landscape/desktop layout ----- */
+/* ----- MEDIA QUERY for DESKTOP layout ----- */
 @media screen and (orientation: landscape) {
 
     #navBurger {
         display: none;
     }
 
-    nav>ul {
+    nav > ul {
         overflow: visible;
     }
 
-    nav>ul>li {
+    nav > ul > li {
         float: left;
         margin: 0.5rem;
     }
 
-    nav>ul>li a {
+    nav > ul > li a {
         padding-right: 0.5rem;
         margin: 0;
     }
 
-    nav>ul>li>ul {
+    nav > ul > li > ul {
         margin: 0 0.5rem 0.5rem 0;
         visibility: hidden;
         position: absolute;
     }
 
-    nav>ul>li.clicked>ul {
+    nav > ul > li.clicked > ul {
         display: block;
         visibility: visible;
     }
 
-    nav>ul>li>ul li {
+    nav > ul > li > ul li {
         margin: 0;
         white-space: nowrap;
     }
 
-    nav>ul>li>a::after {
+    nav > ul > li > ul li a {
+        display: block;
+        padding: 0.5rem 0.75rem;
+    }
+
+    nav > ul > li > a::after {
         content: "";
     }
 
 }
 
-/* position top-level items so submenus can sit under them */
+
+/* ----- HOVER DROPDOWNS (desktop) ----- */
+
 nav > ul > li {
     position: relative;
 }
 
-/* hide submenus by default */
 nav ul li ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background: #777;      /* match your bar color if you want */
+    background: #777;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -279,12 +293,11 @@ nav ul li:hover > ul {
     display: block;
 }
 
-/* also show submenu when JS adds .clicked (mobile) */
+/* show submenu on mobile when JS adds .clicked */
 nav ul li.clicked > ul {
     display: block;
 }
 
-/* submenu link styling */
 nav ul li ul li a {
     display: block;
     padding: 8px 16px;
