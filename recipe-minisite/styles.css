@@ -255,3 +255,44 @@ nav>ul>li>ul>li:hover a {
     }
 
 }
+
+/* position top-level items so submenus can sit under them */
+nav > ul > li {
+    position: relative;
+}
+
+/* hide submenus by default */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #777;      /* match your bar color if you want */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: 180px;
+}
+
+/* show submenu on hover (desktop) */
+nav ul li:hover > ul {
+    display: block;
+}
+
+/* also show submenu when JS adds .clicked (mobile) */
+nav ul li.clicked > ul {
+    display: block;
+}
+
+/* submenu link styling */
+nav ul li ul li a {
+    display: block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav ul li ul li a:hover {
+    background: #666;
+}
