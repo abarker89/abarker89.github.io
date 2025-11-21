@@ -1,9 +1,11 @@
-/* Universal box-sizing */
+/* Tiny Project 9: The Raven – Fully Responsive, Georgia Serif */
+
+/* Universal rules */
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;   /* smooth anchor scrolling */
-    overflow: hidden;          /* hides scrollbars; enforces button navigation */
-    font-family: Georgia, serif; /* GLOBAL FONT */
+    scroll-behavior: smooth;
+    overflow: hidden;              /* hide scrollbar, nav-only movement */
+    font-family: Georgia, serif;   /* global Victorian font */
 }
 
 html, body {
@@ -12,18 +14,17 @@ html, body {
     padding: 0;
 }
 
-/* Remove default spacing on text elements */
 h1, h2, p {
     margin: 0;
     padding: 0;
 }
 
-/* Scrolling layout: 5 sections x 100vh */
+/* Main scroll area */
 main {
-    height: 500vh;
+    height: 500vh; /* 5 sections x 100vh */
 }
 
-/* Every section = 1 full screen */
+/* Each section = full screen */
 section {
     position: relative;
     height: 100vh;
@@ -31,86 +32,109 @@ section {
     background-position: center;
 }
 
-/* CONTENT BLOCK */
+/* ---------------------------------------- */
+/* CONTENT BLOCK — RESPONSIVE */
+/* ---------------------------------------- */
 section > .content {
     position: absolute;
-    width: 42vw;
     top: 20vh;
     right: 4vw;
 
+    /* Responsive width */
+    width: clamp(250px, 40vw, 600px);
+
+    /* Responsive padding */
+    padding: clamp(0.5rem, 1.2vw, 1.2rem);
+
     background: rgba(0, 0, 0, 0.45);
-    padding: 1rem;
     border-radius: 6px;
-    color: white;
 
     border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-/* Body text */
+/* Responsive paragraph text */
 section > .content > p {
-    font-size: 2rem;
-    line-height: 2.4rem;
+    font-size: clamp(1rem, 2vw, 2rem);
+    line-height: 1.4;
 }
 
-/* NEXT / PREVIOUS NAV BUTTONS */
+/* ---------------------------------------- */
+/* NAVIGATION BUTTONS */
+/* ---------------------------------------- */
 section > .controls {
     position: absolute;
-    width: 42vw;
+    width: clamp(200px, 40vw, 600px);
     right: 4vw;
-    padding: 1rem;
+    padding: clamp(0.5rem, 1vw, 1rem);
 }
 
 .goNext { bottom: 2vh; }
 .goPrevious { top: 2vh; }
 
+/* Button text */
 section > .controls a {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
     font-weight: bold;
-    color: white;
+
     background: rgba(0,0,0,0.55);
-    padding: 6px 10px;
+    color: white;
+
+    padding: clamp(0.2rem, 0.6vw, 0.6rem) clamp(0.4rem, 1vw, 1rem);
     border-radius: 4px;
     transition: 0.2s;
 }
 
 section > .controls a:hover {
-    color: #ddd;
     background: rgba(0,0,0,0.8);
+    color: #ddd;
 }
 
-/* TITLE SECTION */
+/* ---------------------------------------- */
+/* TITLE SECTION — RESPONSIVE */
+/* ---------------------------------------- */
 #section1 p,
 #section1 h1 {
     text-transform: uppercase;
 }
 
 #section1 h1 {
-    font-size: 6rem;
-    line-height: 5rem;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
     margin-left: -0.4rem;
     padding-left: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: clamp(1px, 0.5vw, 3px);
 }
 
-/* BACKGROUND IMAGES — UPDATE FILENAMES AS NEEDED */
+/* ---------------------------------------- */
+/* BACKGROUND IMAGES */
+/* ---------------------------------------- */
 #section1 { background-image: url("raven1.jpg"); }
 #section2 { background-image: url("raven2.jpg"); }
 #section3 { background-image: url("raven3.png"); }
 #section4 { background-image: url("raven4.jpg"); }
 #section5 { background-image: url("raven5.png"); }
 
-/* Last section readability */
+/* ---------------------------------------- */
+/* SECTION 5 SPECIAL ADJUSTMENTS */
+/* ---------------------------------------- */
+/* Move box upward and shrink slightly */
 #section5 .content {
+    top: 10vh;  /* lifted */
     background: rgba(255,255,255,0.75);
     color: black;
     text-shadow: none;
-    top: 8vh;
+
+    /* slightly narrower box */
+    width: clamp(250px, 36vw, 550px);
 }
 
+/* Section 5 text a bit smaller */
 #section5 .content p {
-    font-size: 1.7rem;   
-    line-height: 2.2rem;
+    font-size: clamp(0.9rem, 1.7vw, 1.7rem);
+    line-height: 1.4;
 }
