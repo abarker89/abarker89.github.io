@@ -1,5 +1,3 @@
-/* Tiny Project 9: The Raven – Full CSS using Georgia serif */
-
 /* Universal box-sizing */
 * {
     box-sizing: border-box;
@@ -109,5 +107,5 @@ section > .controls a:hover {
     background: rgba(255,255,255,0.75);
     color: black;
     text-shadow: none;
-    top: 10vh;
+    top: 8vh;
 }
