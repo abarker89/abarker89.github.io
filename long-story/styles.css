@@ -146,3 +146,7 @@ section>.controls a:hover {
 #section5 {
     background-image: url("raven5.png");
 }
+
+#section5 .content {
+    width: clamp(400px, 95vw, 1400px);
+}
