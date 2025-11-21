@@ -1,45 +1,104 @@
-/* Make each step fill the screen */
-.step {
-    height: 100vh; 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Raven Vertical Scroll Layout */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Titillium+Web:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
 }
 
-/* Text box */
-.content {
-    max-width: 600px;
-    background: rgba(0,0,0,0.5);
-    padding: 20px;
-    border-radius: 8px;
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "Titillium Web", sans-serif;
 }
 
-/* Simple full-screen background images for each step */
-#step1 {
-    background: url('images/raven1.jpg') center/cover no-repeat;
-}
-
-#step2 {
-    background: url('images/raven2.jpg') center/cover no-repeat;
-}
-
-#step3 {
-    background: url('images/raven3.png') center/cover no-repeat;
-}
-
-#step4 {
-    background: url('images/raven4.jpg') center/cover no-repeat;
-}
-
-#step5 {
-    background: url('images/raven5.png') center/cover no-repeat;
-}
-
-/* Typography */
+/* Reset text spacing */
 h1, h2, p {
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make the whole scroll area 5 screens tall */
+main {
+    height: 500vh;
+}
+
+/* Each section is full screen */
+section {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Content box aligned to top-right like example */
+section > .content {
+    position: absolute;
+    width: 42vw;
+    top: 20vh;
+    right: 4vw;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 1rem;
+    border-radius: 6px;
+    color: white;
+}
+
+/* Text in content */
+section > .content > p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+/* Scroll prompt */
+section > .instructions {
+    position: absolute;
+    bottom: 2vh;
+    width: 42vw;
+    right: 4vw;
+    font-size: 1rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Title stylings */
+#section1 p,
+#section1 h1 {
+    text-transform: uppercase;
+}
+
+#section1 h1 {
+    font-size: 6rem;
+    line-height: 5rem;
+    font-family: Limelight, serif;
+    margin-left: -0.4rem;
+    padding-left: 1rem;
+}
+
+/* Background images per section */
+#section1 {
+    background-image: url("images/raven1.jpg");
+}
+
+#section2 {
+    background-image: url("images/raven2.jpg");
+}
+
+#section3 {
+    background-image: url("images/raven3.png");
+}
+
+#section4 {
+    background-image: url("images/raven4.jpg");
+}
+
+#section5 {
+    background-image: url("images/raven5.png");
+}
+
+/* Improve readability for last slide */
+#section5 .content {
+    background: rgba(207, 221, 235, 0.75);
+    color: black;
 }
