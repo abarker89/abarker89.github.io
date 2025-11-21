@@ -150,3 +150,8 @@ section>.controls a:hover {
 #section5 .content {
     width: clamp(400px, 95vw, 1400px);
 }
+
+#section5 .content p {
+    font-size: clamp(0.9rem, 1.7vw, 1.6rem);
+}
+
