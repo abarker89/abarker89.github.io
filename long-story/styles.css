@@ -67,7 +67,7 @@ section > .content > p {
 section > .controls {
     position: absolute;
     width: clamp(200px, 40vw, 600px);
-    right: 4vw;
+    left: 4vw;
     padding: clamp(0.5rem, 1vw, 1rem);
 }
 
