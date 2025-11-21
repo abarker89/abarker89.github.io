@@ -78,23 +78,23 @@ section > .instructions {
 
 /* Background images per section */
 #section1 {
-    background-image: url("images/raven1.jpg");
+    background-image: url("raven1.jpg");
 }
 
 #section2 {
-    background-image: url("images/raven2.jpg");
+    background-image: url("raven2.jpg");
 }
 
 #section3 {
-    background-image: url("images/raven3.png");
+    background-image: url("raven3.png");
 }
 
 #section4 {
-    background-image: url("images/raven4.jpg");
+    background-image: url("raven4.jpg");
 }
 
 #section5 {
-    background-image: url("images/raven5.png");
+    background-image: url("raven5.png");
 }
 
 /* Improve readability for last slide */
