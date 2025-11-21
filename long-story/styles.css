@@ -98,11 +98,11 @@ section > .controls a:hover {
 }
 
 /* BACKGROUND IMAGES — UPDATE FILENAMES AS NEEDED */
-#section1 { background-image: url("images/raven1.jpg"); }
-#section2 { background-image: url("images/raven2.jpg"); }
-#section3 { background-image: url("images/raven3.jpg"); }
-#section4 { background-image: url("images/raven4.jpg"); }
-#section5 { background-image: url("images/raven5.jpg"); }
+#section1 { background-image: url("raven1.jpg"); }
+#section2 { background-image: url("raven2.jpg"); }
+#section3 { background-image: url("raven3.png"); }
+#section4 { background-image: url("raven4.jpg"); }
+#section5 { background-image: url("raven5.png"); }
 
 /* Last section readability */
 #section5 .content {
