@@ -1,32 +1,31 @@
-/* Raven Vertical Scroll WITH NAVIGATION BUTTONS */
+/* Tiny Project 9: The Raven – Full CSS using Georgia serif */
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Titillium+Web:wght@300&display=swap');
-
+/* Universal box-sizing */
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;   /* smooth movement */
-    overflow: hidden;          /* hides scrollbar so navigation buttons must be used */
+    scroll-behavior: smooth;   /* smooth anchor scrolling */
+    overflow: hidden;          /* hides scrollbars; enforces button navigation */
+    font-family: Georgia, serif; /* GLOBAL FONT */
 }
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Titillium Web", sans-serif;
 }
 
+/* Remove default spacing on text elements */
 h1, h2, p {
     margin: 0;
     padding: 0;
 }
 
-/* Entire scroll area */
+/* Scrolling layout: 5 sections x 100vh */
 main {
-    height: 500vh; /* 5 screens */
+    height: 500vh;
 }
 
-/* Each section is one full screen with its own background */
+/* Every section = 1 full screen */
 section {
     position: relative;
     height: 100vh;
@@ -34,7 +33,7 @@ section {
     background-position: center;
 }
 
-/* CONTENT BOX */
+/* CONTENT BLOCK */
 section > .content {
     position: absolute;
     width: 42vw;
@@ -45,14 +44,18 @@ section > .content {
     padding: 1rem;
     border-radius: 6px;
     color: white;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
+/* Body text */
 section > .content > p {
     font-size: 2rem;
     line-height: 2.4rem;
 }
 
-/* CONTROL BUTTONS */
+/* NEXT / PREVIOUS NAV BUTTONS */
 section > .controls {
     position: absolute;
     width: 42vw;
@@ -67,14 +70,20 @@ section > .controls a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
-    color: #fff;
+    font-weight: bold;
+    color: white;
+    background: rgba(0,0,0,0.55);
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: 0.2s;
 }
 
 section > .controls a:hover {
     color: #ddd;
+    background: rgba(0,0,0,0.8);
 }
 
-/* TITLE SECTION STYLES */
+/* TITLE SECTION */
 #section1 p,
 #section1 h1 {
     text-transform: uppercase;
@@ -83,20 +92,21 @@ section > .controls a:hover {
 #section1 h1 {
     font-size: 6rem;
     line-height: 5rem;
-    font-family: Limelight, serif;
     margin-left: -0.4rem;
     padding-left: 1rem;
+    letter-spacing: 2px;
 }
 
-/* PER-SECTION BACKGROUND IMAGES */
-#section1 { background-image: url("raven1.jpg"); }
-#section2 { background-image: url("raven2.jpg"); }
-#section3 { background-image: url("raven3.png"); }
-#section4 { background-image: url("raven4.jpg"); }
-#section5 { background-image: url("raven5.png"); }
+/* BACKGROUND IMAGES — UPDATE FILENAMES AS NEEDED */
+#section1 { background-image: url("images/raven1.jpg"); }
+#section2 { background-image: url("images/raven2.jpg"); }
+#section3 { background-image: url("images/raven3.jpg"); }
+#section4 { background-image: url("images/raven4.jpg"); }
+#section5 { background-image: url("images/raven5.jpg"); }
 
-/* Make last section readable */
+/* Last section readability */
 #section5 .content {
-    background: rgba(207, 221, 235, 0.75);
+    background: rgba(255,255,255,0.75);
     color: black;
+    text-shadow: none;
 }
