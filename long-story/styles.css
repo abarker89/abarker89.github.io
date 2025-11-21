@@ -1,10 +1,7 @@
-/* Tiny Project 9: The Raven – Fully Responsive, Georgia Serif */
-
 /* Universal rules */
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    overflow: hidden;              /* hide scrollbar, nav-only movement */
     font-family: Georgia, serif;   /* global Victorian font */
 }
 
@@ -12,6 +9,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 h1, h2, p {
