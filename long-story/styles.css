@@ -109,3 +109,8 @@ section > .controls a:hover {
     text-shadow: none;
     top: 8vh;
 }
+
+#section5 .content p {
+    font-size: 1.7rem;   
+    line-height: 2.2rem;
+}
