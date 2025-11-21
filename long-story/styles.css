@@ -35,8 +35,9 @@ section {
 /* ---------------------------------------- */
 section > .content {
     position: absolute;
-    top: 20vh;
-    right: 4vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     /* Responsive width */
     width: clamp(250px, 40vw, 600px);
