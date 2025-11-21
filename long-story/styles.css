@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: Georgia, serif;   /* global Victorian font */
+    font-family: Georgia, serif;   
 }
 
 html, body {
@@ -19,10 +19,10 @@ h1, h2, p {
 
 /* Main scroll area */
 main {
-    height: 500vh; /* 5 sections x 100vh */
+    height: 500vh; 
 }
 
-/* Each section = full screen */
+
 section {
     position: relative;
     height: 100vh;
@@ -30,9 +30,9 @@ section {
     background-position: center;
 }
 
-/* ---------------------------------------- */
+
 /* CONTENT BLOCK — RESPONSIVE */
-/* ---------------------------------------- */
+
 section > .content {
     position: absolute;
     top: 45%;
@@ -59,9 +59,9 @@ section > .content > p {
     line-height: 1.4;
 }
 
-/* ---------------------------------------- */
+
 /* NAVIGATION BUTTONS */
-/* ---------------------------------------- */
+
 section > .controls {
     position: absolute;
     width: clamp(200px, 40vw, 600px);
@@ -92,9 +92,9 @@ section > .controls a:hover {
     color: #ddd;
 }
 
-/* ---------------------------------------- */
+
 /* TITLE SECTION — RESPONSIVE */
-/* ---------------------------------------- */
+
 #section1 p,
 #section1 h1 {
     text-transform: uppercase;
@@ -108,26 +108,25 @@ section > .controls a:hover {
     letter-spacing: clamp(1px, 0.5vw, 3px);
 }
 
-/* ---------------------------------------- */
+
 /* BACKGROUND IMAGES */
-/* ---------------------------------------- */
+
 #section1 { background-image: url("raven1.jpg"); }
 #section2 { background-image: url("raven2.jpg"); }
 #section3 { background-image: url("raven3.png"); }
 #section4 { background-image: url("raven4.jpg"); }
 #section5 { background-image: url("raven5.png"); }
 
-/* ---------------------------------------- */
+
 /* SECTION 5 SPECIAL ADJUSTMENTS */
-/* ---------------------------------------- */
-/* Move box upward and shrink slightly */
+
 #section5 .content {
-    top: 10vh;  /* lifted */
+    top: 10vh;  
     background: rgba(255,255,255,0.75);
     color: black;
     text-shadow: none;
 
-    /* slightly narrower box */
+  
     width: clamp(250px, 36vw, 550px);
 }
 
