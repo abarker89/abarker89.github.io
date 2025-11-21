@@ -117,21 +117,3 @@ section > .controls a:hover {
 #section4 { background-image: url("raven4.jpg"); }
 #section5 { background-image: url("raven5.png"); }
 
-
-/* SECTION 5 SPECIAL ADJUSTMENTS */
-
-#section5 .content {
-    top: 10vh;  
-    background: rgba(255,255,255,0.75);
-    color: black;
-    text-shadow: none;
-
-  
-    width: clamp(250px, 36vw, 550px);
-}
-
-/* Section 5 text a bit smaller */
-#section5 .content p {
-    font-size: clamp(0.9rem, 1.7vw, 1.7rem);
-    line-height: 1.4;
-}
