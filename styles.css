@@ -2,13 +2,22 @@
    Customizable Variables
 ------------------------- */
 :root {
-  --bg: #f8f8f8;
-  --fg: #222;
-  --accent: #6a8efb;
+  --bg1: #f3f7f4;     /* pale green mist */
+  --bg2: #eef4f6;     /* cooler bright fog */
+  --bg3: #e3edf0;     /* deeper ice-blue for pop/contrast */
+
+  --fg: #222826;      /* deep neutral grey-green */
+
+  /* enhanced accent color — more vibrant sage/teal */
+  --accent: #6cab8f;
+
+  /* slightly stronger borders for clarity */
   --card-bg: #ffffff;
-  --card-border: #e0e0e0;
+  --card-border: #c6d7d2;
+
   --radius: 12px;
   --max-width: 800px;
+
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Fjalla One', sans-serif;
 }
@@ -16,46 +25,76 @@
 /* ----------------------
    Global Styles
 ------------------------- */
+
 body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-body);
   margin: 0;
+  font-family: var(--font-body);
+  color: var(--fg);
   line-height: 1.65;
+
+  /* subtle gradient */
+  background: linear-gradient(
+    to bottom,
+    var(--bg1) 0%,
+    var(--bg2) 40%,
+    var(--bg3) 100%
+  );
+
+  position: relative;
+  overflow-x: hidden;
 }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
+/* Soft vignette around edges */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    rgba(255,255,255,0) 60%,
+    rgba(0,0,0,0.06) 100%
+  );
+  z-index: -1;
 }
 
-a:hover {
-  opacity: 0.7;
+/* Subtle film grain texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQI12P4//8/AwAI/AL+qOR/mwAAAABJRU5ErkJggg==');
+  opacity: 0.07;
+  z-index: -1;
 }
 
 /* ----------------------
    Header
 ------------------------- */
+
 .site-header {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 50px 20px 25px;
 }
 
 .site-title {
   font-family: var(--font-heading);
-  font-size: 42px;
+  font-size: 44px;
   margin: 0;
+  color: var(--fg);
 }
 
 .tagline {
-  margin-top: 5px;
+  margin-top: 6px;
   font-size: 16px;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 /* ----------------------
-   Page Layout
+   Layout Container
 ------------------------- */
+
 .container {
   max-width: var(--max-width);
   margin: 30px auto;
@@ -65,26 +104,49 @@ a:hover {
 /* ----------------------
    Cards
 ------------------------- */
+
 .card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   padding: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
+
+  /* Soft FF UI shadow */
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.05),
+    0 3px 8px rgba(0,0,0,0.06);
 }
 
 .card h2 {
   font-family: var(--font-heading);
   margin-top: 0;
   font-size: 24px;
+  color: var(--fg);
+}
+
+/* ----------------------
+   Links
+------------------------- */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+a:hover {
+  opacity: 0.85;
+  color: #5ea88d; /* slightly deeper on hover for extra pop */
 }
 
 /* ----------------------
    Footer
 ------------------------- */
+
 .footer {
   text-align: center;
-  padding: 25px 0;
+  padding: 28px 0;
   font-size: 14px;
   opacity: 0.6;
 }
