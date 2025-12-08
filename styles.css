@@ -2,24 +2,24 @@
    Customizable Variables
 ------------------------- */
 :root {
-  --bg1: #f3f7f4;     /* pale green mist */
-  --bg2: #eef4f6;     /* cooler bright fog */
-  --bg3: #e3edf0;     /* deeper ice-blue for pop/contrast */
+    --bg1: #f3f7f4;
 
-  --fg: #222826;      /* deep neutral grey-green */
+    --bg2: #eef4f6;
 
-  /* enhanced accent color — more vibrant sage/teal */
-  --accent: #6cab8f;
+    --bg3: #e3edf0;
 
-  /* slightly stronger borders for clarity */
-  --card-bg: #ffffff;
-  --card-border: #c6d7d2;
+    --fg: #222826;
 
-  --radius: 12px;
-  --max-width: 800px;
+    --accent: #6cab8f;
 
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Fjalla One', sans-serif;
+    --card-bg: #ffffff;
+    --card-border: #c6d7d2;
+
+    --radius: 12px;
+    --max-width: 800px;
+
+    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Fjalla One', sans-serif;
 }
 
 /* ----------------------
@@ -27,46 +27,42 @@
 ------------------------- */
 
 body {
-  margin: 0;
-  font-family: var(--font-body);
-  color: var(--fg);
-  line-height: 1.65;
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--fg);
+    line-height: 1.65;
 
-  /* subtle gradient */
-  background: linear-gradient(
-    to bottom,
-    var(--bg1) 0%,
-    var(--bg2) 40%,
-    var(--bg3) 100%
-  );
+    /* Subtle gradient */
+    background: linear-gradient(to bottom,
+            var(--bg1) 0%,
+            var(--bg2) 40%,
+            var(--bg3) 100%);
 
-  position: relative;
-  overflow-x: hidden;
+    position: relative;
+    overflow-x: hidden;
 }
 
 /* Soft vignette around edges */
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at center,
-    rgba(255,255,255,0) 60%,
-    rgba(0,0,0,0.06) 100%
-  );
-  z-index: -1;
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(0, 0, 0, 0.06) 100%);
+    z-index: -1;
 }
 
-/* Subtle film grain texture */
+/* Subtle grain texture */
 body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQI12P4//8/AwAI/AL+qOR/mwAAAABJRU5ErkJggg==');
-  opacity: 0.07;
-  z-index: -1;
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQI12P4//8/AwAI/AL+qOR/mwAAAABJRU5ErkJggg==');
+    opacity: 0.07;
+    z-index: -1;
 }
 
 /* ----------------------
@@ -74,21 +70,21 @@ body::after {
 ------------------------- */
 
 .site-header {
-  text-align: center;
-  padding: 50px 20px 25px;
+    text-align: center;
+    padding: 50px 20px 25px;
 }
 
 .site-title {
-  font-family: var(--font-heading);
-  font-size: 44px;
-  margin: 0;
-  color: var(--fg);
+    font-family: var(--font-heading);
+    font-size: 44px;
+    margin: 0;
+    color: var(--fg);
 }
 
 .tagline {
-  margin-top: 6px;
-  font-size: 16px;
-  opacity: 0.75;
+    margin-top: 6px;
+    font-size: 16px;
+    opacity: 0.75;
 }
 
 /* ----------------------
@@ -96,9 +92,9 @@ body::after {
 ------------------------- */
 
 .container {
-  max-width: var(--max-width);
-  margin: 30px auto;
-  padding: 0 20px;
+    max-width: var(--max-width);
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
 /* ----------------------
@@ -106,23 +102,21 @@ body::after {
 ------------------------- */
 
 .card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 28px;
-
-  /* Soft FF UI shadow */
-  box-shadow:
-    0 1px 2px rgba(0,0,0,0.05),
-    0 3px 8px rgba(0,0,0,0.06);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 28px;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.05),
+        0 3px 8px rgba(0, 0, 0, 0.06);
 }
 
 .card h2 {
-  font-family: var(--font-heading);
-  margin-top: 0;
-  font-size: 24px;
-  color: var(--fg);
+    font-family: var(--font-heading);
+    margin-top: 0;
+    font-size: 24px;
+    color: var(--fg);
 }
 
 /* ----------------------
@@ -130,14 +124,14 @@ body::after {
 ------------------------- */
 
 a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: opacity 0.15s ease, color 0.15s ease;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.15s ease, color 0.15s ease;
 }
 
 a:hover {
-  opacity: 0.85;
-  color: #5ea88d; /* slightly deeper on hover for extra pop */
+    opacity: 0.85;
+    color: #5ea88d;
 }
 
 /* ----------------------
@@ -145,8 +139,8 @@ a:hover {
 ------------------------- */
 
 .footer {
-  text-align: center;
-  padding: 28px 0;
-  font-size: 14px;
-  opacity: 0.6;
+    text-align: center;
+    padding: 28px 0;
+    font-size: 14px;
+    opacity: 0.6;
 }
