@@ -1,54 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adam Barker</title>
+  <link rel="stylesheet" href="styles.css">
 
-	<!-- meta tags and title -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Adam's Website</title>
-
-	<!-- external and internal CSS -->
-	<link rel="stylesheet" href="styles.css" media="all">
-	<style>
-		/* in-file CSS here */
-	</style>
-
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-	<h1>Adam</h1>
-	<p>Student, Designer, Artist, Musician, Movie Enjoyer</p>
+  <header class="site-header">
+    <h1 class="site-title">Adam Barker</h1>
+    <p class="tagline">Artist. Designer. Musician. Explorer.</p>
+  </header>
 
-	<p><a href="//github.com/abarker89/abarker89.github.io">GitHub Repository</a></p>
+  <nav class="nav">
+    <a href="#activities">Activities</a>
+    <a href="#tiny-projects">Tiny Projects</a>
+    <a href="#major-project">Major Project</a>
+  </nav>
 
-	<hr>
+  <main class="container">
 
-	<h2>Activities</h2>
-	<ul>
-		<li>Links to future activities go here</li>
-	</ul>
+    <section class="intro">
+      <p class="repo-link">
+        <a href="https://github.com/abarker89/abarker89.github.io" target="_blank">
+          Visit my GitHub Repository
+        </a>
+      </p>
+    </section>
 
-	<hr>
+    <section id="activities" class="card">
+      <h2>Activities</h2>
+      <ul>
+        <li>Links to future activities go here</li>
+      </ul>
+    </section>
 
-	<h2>Tiny Projects</h2>
-	<ul>
-		<li><a href="hello-world.html">TP1: Hello World!</a></li>
-		<li><a href="favorite-recipe">TP2: Gooseberry Pie Recipe</a></li>
-		<li><a href="anni-albers">TP3: Anni Albers</a></li>
-		<li><a href="rhododendron">TP4: Pacific Rhododendron</a></li>
-		<li><a href="responsive-recipe/">TP6: Responsive Recipe</a></li>
-		<li><a href="recipe-minisite/">TP7: Recipe Mini-site</a></li>
-		<li><a href="dark-flower/">TP8: Dark Flower</a></li>
-		<li><a href="long-story/">TP9: Long Story</a></li>
+    <section id="tiny-projects" class="card">
+      <h2>Tiny Projects</h2>
+      <ul>
+        <li><a href="hello-world.html">TP1: Hello World</a></li>
+        <li><a href="favorite-recipe">TP2: Gooseberry Pie Recipe</a></li>
+        <li><a href="anni-albers">TP3: Anni Albers</a></li>
+        <li><a href="rhododendron">TP4: Pacific Rhododendron</a></li>
+        <li><a href="responsive-recipe/">TP6: Responsive Recipe</a></li>
+        <li><a href="recipe-minisite/">TP7: Recipe Mini-site</a></li>
+        <li><a href="dark-flower/">TP8: Dark Flower</a></li>
+        <li><a href="long-story/">TP9: Long Story</a></li>
+      </ul>
+    </section>
 
-	</ul>
+    <section id="major-project" class="card">
+      <h2>Major Project</h2>
+      <p>Coming soon</p>
+    </section>
 
-	<hr>
+  </main>
 
-	<h2>Major Project</h2>
-	<p>Coming soon.</p>
+  <footer class="footer">
+    <p>© 2025 Adam Barker</p>
+  </footer>
 
 </body>
 
