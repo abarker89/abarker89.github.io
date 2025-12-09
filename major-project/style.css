@@ -131,7 +131,7 @@ nav h1 {
 .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
+    object-fit: contain;
     object-position: center;
 }
 
@@ -139,11 +139,9 @@ nav h1 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.7)
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.7));
     top: 0;
     left: 0;
     z-index: 1;
@@ -181,6 +179,21 @@ nav h1 {
     }
 }
 
+/* FIX ---- hero text overlapping header on small screens  */
+
+@media (max-width: 600px) {
+    .hero {
+        height: 48vh;
+        padding-top: 20px;
+    }
+
+    .hero-text {
+        bottom: 4%;
+        padding-top: 20px;
+    }
+}
+
+
 /* ------------------------------
    ARTSTYLE PAGE BOTTOM GRID
 ------------------------------ */
@@ -205,6 +218,7 @@ nav h1 {
     .artstyle-grid {
         grid-template-columns: 1fr;
     }
+
     .artstyle-grid img {
         height: 32vh;
     }
@@ -237,6 +251,7 @@ main img {
     main h2 {
         font-size: 28px;
     }
+
     body {
         font-size: 16px;
     }
@@ -264,7 +279,7 @@ footer {
     width: 100%;
     max-width: 800px;
     margin: 30px auto;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 6px;
