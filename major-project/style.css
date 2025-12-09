@@ -1,6 +1,6 @@
-/* ------------------------------
+/* ============================================================
    GLOBAL VARIABLES
------------------------------- */
+============================================================ */
 
 :root {
     --bg: #111217;
@@ -9,9 +9,9 @@
     --max-width: 800px;
 }
 
-/* ------------------------------
-   GLOBAL RESET + BASE
------------------------------- */
+/* ============================================================
+   RESET + BASE
+============================================================ */
 
 body {
     margin: 0;
@@ -23,13 +23,12 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
     display: block;
 }
 
-/* ------------------------------
+/* ============================================================
    HEADER + NAVIGATION
------------------------------- */
+============================================================ */
 
 header {
     background: #0d0e12;
@@ -66,14 +65,15 @@ nav h1 {
     text-decoration: none;
     color: var(--fg);
     font-weight: 300;
-    transition: color 0.2s;
+    transition: 0.2s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--accent);
 }
 
-/* Dropdown Menu */
+/* Dropdown */
 
 .dropdown {
     position: relative;
@@ -102,7 +102,7 @@ nav h1 {
     margin-bottom: 0;
 }
 
-/* Responsive nav tweaks */
+/* Nav responsive */
 
 @media (max-width: 900px) {
     .nav-links {
@@ -117,9 +117,9 @@ nav h1 {
     }
 }
 
-/* ------------------------------
-   HERO SECTION
------------------------------- */
+/* ============================================================
+   UNIVERSAL HERO SECTION
+============================================================ */
 
 .hero {
     position: relative;
@@ -131,16 +131,20 @@ nav h1 {
 .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center 100%;
-    filter: brightness(0.50);
+    object-fit: cover; /* universal across site */
+    object-position: center;
+    filter: brightness(0.55);
 }
 
 .hero-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75));
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.7)
+    );
     top: 0;
     left: 0;
     z-index: 1;
@@ -159,68 +163,57 @@ nav h1 {
 
 .hero-text h2 {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(24px, 4vw, 40px);
+    font-size: clamp(26px, 4vw, 40px);
     margin-bottom: 10px;
     color: var(--fg);
 }
 
 .hero-text p {
-    font-size: clamp(14px, 2.2vw, 18px);
+    font-size: clamp(14px, 2vw, 18px);
     font-weight: 300;
-    color: var(--fg);
     opacity: 0.85;
 }
 
-/* ----------------------------------
-   ART STYLE PAGE – TOP GRID HERO
------------------------------------ */
-
-.artstyle-grid-hero {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    width: 100%;
-    height: 55vh;
-    overflow: hidden;
-}
-
-.artstyle-grid-hero img {
-    width: 100%;
-    height: 100% !important; /* FORCE override global height:auto */
-    object-fit: cover;
-    display: block;
-}
-
-/* Mobile: stacked layout */
-@media (max-width: 700px) {
-    .artstyle-grid-hero {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 40vh);
-        height: auto;
-    }
-}
-
-/* Responsive image shifts */
-
-@media (max-width: 1000px) {
-    .hero-img {
-        object-position: center 40%;
-    }
-}
+/* Mobile hero adjustments */
 
 @media (max-width: 600px) {
     .hero {
         height: 40vh;
     }
+}
 
-    .hero-img {
-        object-position: center 45%;
+/* ============================================================
+   ARTSTYLE BOTTOM GRID
+============================================================ */
+
+.artstyle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.artstyle-grid img {
+    width: 100%;
+    height: 38vh;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+    .artstyle-grid {
+        grid-template-columns: 1fr;
+    }
+    .artstyle-grid img {
+        height: 32vh;
     }
 }
 
-/* ------------------------------
+/* ============================================================
    MAIN CONTENT
------------------------------- */
+============================================================ */
 
 main {
     max-width: var(--max-width);
@@ -228,39 +221,31 @@ main {
     padding: 0 20px;
 }
 
-main img {
-    border-radius: 4px;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    opacity: 0.95;
-}
-
 main h2 {
     font-family: "Cormorant Garamond", serif;
     font-size: 32px;
     color: var(--accent);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
-/* Mobile adjustments */
+main img {
+    border-radius: 4px;
+    opacity: 0.95;
+    margin: 20px 0;
+}
 
 @media (max-width: 600px) {
     main h2 {
         font-size: 28px;
     }
-
     body {
         font-size: 16px;
     }
-
-    main {
-        padding: 0 16px;
-    }
 }
 
-/* ------------------------------
+/* ============================================================
    FOOTER
------------------------------- */
+============================================================ */
 
 footer {
     text-align: center;
