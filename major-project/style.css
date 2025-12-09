@@ -172,6 +172,35 @@ nav h1 {
     opacity: 0.85;
 }
 
+/* ----------------------------------
+   ART STYLE GRID HERO (TOP MOSAIC)
+----------------------------------- */
+
+.artstyle-grid-hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+}
+
+.artstyle-grid-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+/* Mobile layout: stack images */
+@media (max-width: 700px) {
+    .artstyle-grid-hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 35vh);
+        height: auto;
+    }
+}
+
+
 /* Responsive image shifts */
 
 @media (max-width: 1000px) {
