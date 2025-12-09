@@ -133,7 +133,7 @@ nav h1 {
     height: 100%;
     object-fit: contain; /* universal across site */
     object-position: center;
-    filter: brightness(0.55);
+    filter: brightness(0.85);
 }
 
 .hero-overlay {
