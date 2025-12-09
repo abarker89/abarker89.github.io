@@ -131,9 +131,8 @@ nav h1 {
 .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* universal across site */
+    object-fit: contain; 
     object-position: center;
-    filter: brightness(0.85);
 }
 
 .hero-overlay {
