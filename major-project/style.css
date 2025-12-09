@@ -255,3 +255,27 @@ footer {
     font-size: 14px;
     opacity: 0.8;
 }
+
+/* ------------------------------
+   VIDEO EMBED STYLING
+------------------------------ */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
